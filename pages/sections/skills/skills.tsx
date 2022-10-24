@@ -14,14 +14,15 @@ export const Skills = () => {
     return (
         <section className="skills" id="skills">
             <Headings
-                className="w-full flex flex-col items-end mb-[5rem]"
+                className="w-full flex flex-col items-end  mb-5 tablet:mb-[5rem]"
                 h2="Skills"
                 h5="My Specialties"
                 h5className="headings__right--h5 text-sm"
                 h2className="headings--h2 text-lg tablet:text-xl"
             />
-            <div className="skills__container grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-y-20 place-items-center">
+            <div className="skills__container grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-y-20 place-items-center max-w-[120rem] m-auto">
                 <SkillsCard
+                    className="w-1/5"
                     icon={faPen}
                     title="UX/UI Design"
                     text="I create unique user experiences through skillfully created user interface design that stands out among other websites and applications."

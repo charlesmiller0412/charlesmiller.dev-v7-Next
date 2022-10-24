@@ -25,7 +25,7 @@ export const Projects = (props: any) => {
     }, []);
     return (
         <section className="projects" id="projects">
-            <div className="projects__heading flex justify-between items-center mb-[5rem]">
+            <div className="projects__heading flex justify-between items-center mb-5 tablet:mb-[5rem]">
                 <Headings
                     h5className="headings__left--h5 text-sm"
                     h2className="headings--h2 text-lg tablet:text-xl"
@@ -38,7 +38,7 @@ export const Projects = (props: any) => {
                     icon={faAnglesRight}
                 />
             </div>
-            <div className="projects__container grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-y-14 place-items-center">
+            <div className="projects__container grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-y-14 place-items-center max-w-[120rem] m-auto">
                 {projects.map((project: any) => (
                     <ProjectCard key={project._id} project={project} />
                 ))}

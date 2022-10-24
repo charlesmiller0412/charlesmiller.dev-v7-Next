@@ -6,16 +6,18 @@ export const NavLogo = (props: any) => {
 
     return (
         <div className={props.className}>
-            <Image
-                src={
-                    theme == "dark"
-                        ? "/assets/logos/logoDark.svg"
-                        : "/assets/logos/logo.svg"
-                }
-                alt="logo"
-                layout="fill"
-                objectFit="cover"
-            />
+            <a href="#">
+                <Image
+                    src={
+                        theme == "dark"
+                            ? "/assets/logos/logoDark.svg"
+                            : "/assets/logos/logo.svg"
+                    }
+                    alt="logo"
+                    layout="fill"
+                    objectFit="cover"
+                />
+            </a>
         </div>
     );
 };

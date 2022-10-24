@@ -20,9 +20,43 @@ main {
     cursor: pointer;
 }
 
+.tooltip {
+    color: #f1f1f1;
+    position: relative;
+    background-color: #384b52;
+    border-radius: 100%;
+    cursor: help;
+    text-align: center;
+}
+
+.tooltip::after {
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    transition: all ease 0.3s;
+    content: attr(data-tooltip);
+    background: rgba(0, 0, 0, 1);
+    bottom: -1.3rem;
+    min-width: 4rem;
+    margin-left: -2.5rem;
+    border-radius: 0.4rem;
+    padding: 0.25rem 0.5rem;
+    z-index: 1;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+}
+
+.tooltip__tall:hover::after {
+    margin-left: -4rem;
+    bottom: -2.25rem;
+    width: 8rem;
+}
+
 @layer components {
     section {
-        @apply w-full h-auto py-[8rem] px-10 tablet:px-[10rem];
+        @apply w-full h-auto py-[4rem] tablet:py-[8rem] px-10 tablet:px-[3rem] desktop:px-[10rem];
     }
     .btn {
         @apply py-[2vh] rounded-[.4rem] text-xs lg:text-sm font-regular leading-auto transition-all;
@@ -56,7 +90,7 @@ main {
     }
 
     .headings__right--h5 {
-        @apply relative text-offBlack font-medium leading-lg uppercase tracking-[.75rem] after:content-[''] after:w-[1.6rem] after:h-[.2rem] after:bg-blue dark:before:bg-offWhite after:absolute after:bottom-1/2 after:right-0 after:-translate-y-1/2 pr-[2.6rem] dark:text-blue;
+        @apply relative text-offBlack font-medium leading-lg uppercase tracking-[.75rem] after:content-[''] after:w-[1.6rem] after:h-[.2rem] after:bg-blue dark:after:bg-offWhite after:absolute after:bottom-1/2 after:right-0 after:-translate-y-1/2 pr-[2.6rem] dark:text-blue;
     }
 
     .sun {

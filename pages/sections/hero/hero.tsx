@@ -10,7 +10,7 @@ export const Hero = () => {
 
     return (
         <div
-            className="hero w-screen h-screen pt-[12vh] px-10 tablet:pt-[8vh] tablet:px-[10rem] flex justify-start tablet:justify-center items-center tablet:items-start flex-col relative"
+            className="hero w-screen max-w-[120rem] m-auto h-screen pt-[12vh] px-10 tablet:pt-[8vh] tablet:px-[10rem] flex justify-start tablet:justify-center items-center tablet:items-start flex-col"
             id="hero"
         >
             <Headings

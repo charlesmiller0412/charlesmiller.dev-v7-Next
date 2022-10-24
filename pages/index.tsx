@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { About } from "./sections/about/about";
 import { Hero } from "./sections/hero/hero";
 import { MobileNav } from "./sections/navbar/mobileNav/mobileNav";
 import { Navbar } from "./sections/navbar/navbar";
@@ -6,6 +7,9 @@ import { Projects } from "./sections/projects/projects";
 import { Skills } from "./sections/skills/skills";
 
 const Home = () => {
+    const date = new Date();
+    let year: any = date.getFullYear();
+
     return (
         <div>
             <Head>
@@ -38,9 +42,12 @@ const Home = () => {
                 <Hero />
                 <Projects />
                 <Skills />
+                <About />
             </main>
 
-            <footer></footer>
+            <footer className="bg-black dark:bg-white h-[3vh] text-white dark:text-black text-xs flex justify-center items-center">
+                {year} Copyright &copy; Charles Miller. All rights reserved.
+            </footer>
         </div>
     );
 };

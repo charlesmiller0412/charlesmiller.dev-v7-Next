@@ -4,6 +4,7 @@ import {
     faGithub,
     faLinkedin,
     faDiscord,
+    faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 export const SocialLinks = (props: any) => {
     return (
@@ -31,6 +32,14 @@ export const SocialLinks = (props: any) => {
                 className="text-icons hover:text-blue dark:hover:text-lightBlue text-offBlack dark:text-white transition-all"
             >
                 <FontAwesomeIcon icon={faDiscord} />
+            </a>
+            <a
+                href="https://twitter.com/millersWebDev"
+                target="__blank"
+                onClick={props.onClick}
+                className="text-icons hover:text-blue dark:hover:text-lightBlue text-offBlack dark:text-white transition-all"
+            >
+                <FontAwesomeIcon icon={faTwitter} />
             </a>
             <a
                 href="mailto:charles@charlesmiller.dev"
