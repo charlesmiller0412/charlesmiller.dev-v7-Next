@@ -67,7 +67,7 @@ main {
 
 @layer components {
     section {
-        @apply w-full h-auto py-[8rem] tablet:py-[8rem] px-10 tablet:px-[3rem] desktop:px-[10rem];
+        @apply w-full h-auto py-[4rem] tablet:py-[8rem] px-10 tablet:px-[3rem] desktop:px-[10rem];
     }
     .btn {
         @apply py-[2vh] rounded-[.4rem] text-xs lg:text-sm font-regular leading-auto transition-all;

@@ -31,13 +31,7 @@ export const Hero = (props: any) => {
                 <h3 className="text-md text-center w-fit m-auto tablet:w-full tablet:text-lg font-bold my-[1rem] tablet:my-[3.5rem] tablet:text-left z-10">
                     I&apos;m a Front End Developer <br />&<br /> UX/UI Designer
                 </h3>
-                <AnimationOnScroll
-                    animateIn="animate__bounce"
-                    className="w-full"
-                    animatePreScroll
-                >
-                    <SocialLinks className="socialLinks text-icons w-[17rem] flex justify-between m-auto tablet:m-0" />
-                </AnimationOnScroll>
+                <SocialLinks className="socialLinks text-icons w-[17rem] flex justify-between m-auto tablet:m-0" />
                 <div className="hero__buttons flex justify-evenly tablet:justify-between w-full m-auto tablet:m-0 tablet:w-full tablet:max-w-[28rem] my-[1rem] tablet:mt-[4.5rem] z-10 desktop:max-w-[35rem]">
                     <a href="#projects">
                         <Button

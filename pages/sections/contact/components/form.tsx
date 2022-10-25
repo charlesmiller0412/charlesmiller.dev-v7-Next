@@ -37,7 +37,7 @@ export const Form = (props: any) => {
                 <Button
                     type="reset"
                     text="Clear"
-                    className="btn btn__light--black whitespace-nowrap py-2 w-full hover:bg-black"
+                    className="btn btn__light--black whitespace-nowrap py-2 w-full hover:bg-black hover:bg-offBlack"
                     icon={faAnglesRight}
                 />
                 <Button
