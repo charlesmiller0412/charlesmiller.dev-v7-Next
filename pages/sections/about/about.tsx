@@ -5,12 +5,13 @@ import { GithubLanguages } from "./components/githubLanguages";
 import { ExperienceCard } from "./components/experienceCard";
 import { AboutText } from "./components/aboutText";
 import { AboutSkills } from "./components/aboutSkills";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export const About = () => {
     const [activeAbout, setActiveAbout] = useState("Education");
 
     return (
-        <section className="about w-full h-screen" id="about">
+        <section className="about w-full h-auto" id="about">
             <Headings
                 h5className="headings__left--h5 text-sm"
                 h2className="headings--h2 text-lg tablet:text-xl"
@@ -22,11 +23,16 @@ export const About = () => {
                     <AboutText />
                     <AboutSkills />
                 </div>
-                <div className="about__right w-full pt-5 tablet:mt-0 h-1/2 tablet:w-fit tablet:h-full grid grid-cols-1 grid-rows-3">
-                    <ExperienceCard />
-                    <GitCommits />
-                    <GithubLanguages />
-                </div>
+                <AnimationOnScroll
+                    animateIn="animate__slideInRight"
+                    animateOut="animate__slideOutRight"
+                >
+                    <div className="about__right w-full pt-5 tablet:mt-0 h-1/2 tablet:w-fit tablet:h-full grid grid-cols-1 grid-rows-3">
+                        <ExperienceCard />
+                        <GitCommits />
+                        <GithubLanguages />
+                    </div>
+                </AnimationOnScroll>
             </div>
         </section>
     );

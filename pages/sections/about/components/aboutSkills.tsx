@@ -1,10 +1,15 @@
 import images from "../../../../public/assets/Images";
 import Image from "next/image";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+
 export const AboutSkills = () => {
     return (
-        <div className="aboutSkills flex flex-col justify-between h-2/5">
-            <div className="experience">
-                <div className="row flex w-full justify-center gap-3">
+        <div className="aboutSkills flex flex-col w-full justify-evenly h-1/2">
+            <AnimationOnScroll
+                animateIn="animate__slideInLeft"
+                animateOut="animate__slideOutLeft"
+            >
+                <div className="experience inline-grid grid-cols-11 w-full gap-3">
                     <span
                         className="tooltip w-[2rem] h-[2rem] relative tablet:w-[3.5rem] tablet:h-[3.5rem]"
                         data-tooltip="HTML"
@@ -70,8 +75,6 @@ export const AboutSkills = () => {
                     >
                         <Image src={images.icons.jquery} alt="jQuery" />
                     </span>
-                </div>
-                <div className="row flex w-full justify-center gap-3 mt-3">
                     <span
                         className="tooltip w-[2rem] h-[2rem] relative tablet:w-[3.5rem] tablet:h-[3.5rem]"
                         data-tooltip="Sass"
@@ -139,9 +142,13 @@ export const AboutSkills = () => {
                         <Image src={images.icons.restAPI} alt="Rest API" />
                     </span>
                 </div>
-            </div>
-            <div className="tools">
-                <div className="row flex w-full justify-center gap-3">
+            </AnimationOnScroll>
+            <AnimationOnScroll
+                animateIn="animate__slideInLeft"
+                animateOut="animate__slideOutLeft"
+                delay={200}
+            >
+                <div className="tools grid grid-cols-8 gap-2 my-8">
                     <span
                         className="tooltip w-[2rem] h-[2rem] relative tablet:w-[3.5rem] tablet:h-[3.5rem]"
                         data-tooltip="VS Code"
@@ -193,8 +200,6 @@ export const AboutSkills = () => {
                     >
                         <Image src={images.icons.google} alt="Google" />
                     </span>
-                </div>
-                <div className="row flex w-full justify-center gap-3 mt-3">
                     <span
                         className="tooltip w-[2rem] h-[2rem] relative tablet:w-[3.5rem] tablet:h-[3.5rem]"
                         data-tooltip="Vercel"
@@ -254,7 +259,7 @@ export const AboutSkills = () => {
                         />
                     </span>
                 </div>
-            </div>
+            </AnimationOnScroll>
         </div>
     );
 };

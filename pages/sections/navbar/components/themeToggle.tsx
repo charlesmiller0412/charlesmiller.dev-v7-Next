@@ -6,17 +6,17 @@ export const ThemeToggle = (props: any) => {
     const { theme, setTheme } = useTheme();
 
     return (
-        <button
-            className={props.className}
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        >
+        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
             {theme === "dark" ? (
                 <div className="sun">
-                    <FontAwesomeIcon icon={faSun} />
+                    <FontAwesomeIcon icon={faSun} className={props.className} />
                 </div>
             ) : (
                 <div className="moon">
-                    <FontAwesomeIcon icon={faMoon} />
+                    <FontAwesomeIcon
+                        icon={faMoon}
+                        className={props.className}
+                    />
                 </div>
             )}
         </button>

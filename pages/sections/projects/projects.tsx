@@ -1,28 +1,53 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "../../../components/button";
 import { Headings } from "../../../components/headings";
 import { ProjectCard } from "./components/projectCard";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import Images from "../../../public/assets/Images";
+import Lottie from "react-lottie";
 
 export const Projects = (props: any) => {
-    const [projects, setProjects] = useState([]);
+    let content;
 
-    const fetchProjects = async () => {
-        try {
-            const response = await fetch(
-                "https://millerportfolioprojects.herokuapp.com/api/projects"
-            );
-            const json = await response.json();
-            setProjects(json);
-            return;
-        } catch (err: any) {
-            console.error(err.message);
-        }
+    const logoOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: Images.logos.loading,
+    };
+    const errorOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: Images.logos.error,
     };
 
-    useEffect(() => {
-        fetchProjects();
-    }, []);
+    if (props.loading) {
+        content = (
+            <div className="flex w-full justify-center">
+                <Lottie options={logoOptions} height={60} width={200} />
+            </div>
+        );
+    } else if (props.error) {
+        content = <Lottie options={errorOptions} />;
+    } else {
+        content = (
+            <div className="projects__container grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-y-14 place-items-center max-w-[120rem] m-auto">
+                {props.projects.map((project: any) => (
+                    <ProjectCard key={project._id} project={project} />
+                ))}
+                <AnimationOnScroll
+                    animateIn="animate__flipInX"
+                    animateOut="animate__flipOutX"
+                >
+                    <Button
+                        className="flex btn btn__light--blue tablet:whitespace-nowrap w-fit px-20 h-fit"
+                        text="View all projects in my database"
+                        icon={faAnglesRight}
+                    />
+                </AnimationOnScroll>
+            </div>
+        );
+    }
     return (
         <section className="projects" id="projects">
             <div className="projects__heading flex justify-between items-center mb-5 tablet:mb-[5rem]">
@@ -32,22 +57,8 @@ export const Projects = (props: any) => {
                     h5="My work"
                     h2="Featured Projects"
                 />
-                <Button
-                    className="hidden tablet:flex btn btn__light--blue tablet:whitespace-nowrap w-fit px-20 h-fit"
-                    text="View all projects in my database"
-                    icon={faAnglesRight}
-                />
             </div>
-            <div className="projects__container grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-y-14 place-items-center max-w-[120rem] m-auto">
-                {projects.map((project: any) => (
-                    <ProjectCard key={project._id} project={project} />
-                ))}
-                <Button
-                    className="flex tablet:hidden btn btn__light--blue tablet:whitespace-nowrap w-fit px-20 h-fit"
-                    text="View all projects in my database"
-                    icon={faAnglesRight}
-                />
-            </div>
+            {content}
         </section>
     );
 };

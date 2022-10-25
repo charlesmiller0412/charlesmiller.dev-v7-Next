@@ -1,4 +1,10 @@
 const IMAGES = {
+    logos: {
+        logoLight: require("./logos/logo.svg").default,
+        logoDark: require("./logos/logoDark.svg").default,
+        error: require("./logos/errorDino.json"),
+        loading: require("./logos/loadingLogo.json"),
+    },
     icons: {
         afterEffects: require("./icons/AfterEffects.png"),
         aws: require("./icons/AWS.png"),

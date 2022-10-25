@@ -29,7 +29,7 @@ module.exports = {
             blue: "#7eaecd",
             lightBlue: "#a1dcf0",
             offWhite: "#efefef",
-            white: "#f1f1f1",
+            white: "#f9f9f9",
             cardBG: "rgba(18, 37, 43, 0.9)",
         },
         fontWeight: {

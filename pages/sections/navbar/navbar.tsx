@@ -11,7 +11,7 @@ export const Navbar = () => {
             <NavLogo className="navbar__logo w-[8.7rem] h-[2.5rem] relative" />
             <NavLinks />
             <div className="navbar__right grid grid-cols-2">
-                {loaded ? <ThemeToggle className="text-[2.4rem]" /> : ""}
+                {loaded ? <ThemeToggle className="text-[2rem]" /> : ""}
                 <ResumeBtn />
             </div>
         </div>
