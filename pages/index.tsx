@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import { About } from "./sections/about/about";
-import { Hero } from "./sections/hero/hero";
-import { MobileNav } from "./sections/navbar/mobileNav/mobileNav";
-import { Navbar } from "./sections/navbar/navbar";
-import { Projects } from "./sections/projects/projects";
-import { Skills } from "./sections/skills/skills";
-import { Contact } from "./sections/contact/contact";
+import { About } from "../components/sections/about/about";
+import { Hero } from "../components/sections/hero/hero";
+import { MobileNav } from "../components/sections/navbar/mobileNav/mobileNav";
+import { Navbar } from "../components/sections/navbar/navbar";
+import { Projects } from "../components/sections/projects/projects";
+import { Skills } from "../components/sections/skills/skills";
+import { Contact } from "../components/sections/contact/contact";
 
 const Home = () => {
     const [loading, setLoading] = useState(true);

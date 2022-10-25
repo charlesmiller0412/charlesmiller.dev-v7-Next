@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Button } from "../../../components/button";
-import { Headings } from "../../../components/headings";
+import { Button } from "../../button";
+import { Headings } from "../../headings";
 import { ProjectCard } from "./components/projectCard";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { AnimationOnScroll } from "react-animation-on-scroll";

@@ -1,4 +1,4 @@
-import { Headings } from "../../../components/headings";
+import { Headings } from "../../headings";
 import { SkillsCard } from "./components/skillsCard";
 import {
     faPen,

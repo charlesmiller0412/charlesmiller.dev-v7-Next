@@ -1,5 +1,5 @@
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "../../../../components/button";
+import { Button } from "../../../button";
 
 export const Form = (props: any) => {
     return (

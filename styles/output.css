@@ -1338,6 +1338,10 @@ section {
   padding-left: 5rem;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
 .text-left {
   text-align: left;
 }

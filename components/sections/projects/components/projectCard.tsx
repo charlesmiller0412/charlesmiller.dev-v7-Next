@@ -1,4 +1,4 @@
-import { Button } from "../../../../components/button";
+import { Button } from "../../../button";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 

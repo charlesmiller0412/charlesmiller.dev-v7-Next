@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Headings } from "../../../components/headings";
+import { Headings } from "../../headings";
 import { GitCommits } from "./components/gitCommits";
 import { GithubLanguages } from "./components/githubLanguages";
 import { ExperienceCard } from "./components/experienceCard";

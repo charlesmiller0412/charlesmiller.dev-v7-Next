@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { Button } from "../../../components/button";
+import { Button } from "../../button";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { SocialLinks } from "./components/social";
-import { Headings } from "../../../components/headings";
+import { Headings } from "../../headings";
 import { ProjectCarousel } from "./components/projectCarousel";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 export const Hero = (props: any) => {

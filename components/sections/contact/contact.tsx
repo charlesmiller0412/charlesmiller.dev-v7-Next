@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Headings } from "../../../components/headings";
+import { Headings } from "../../headings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { SocialLinks } from "../hero/components/social";
