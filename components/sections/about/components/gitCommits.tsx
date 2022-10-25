@@ -8,7 +8,7 @@ export const GitCommits = () => {
         let list = [];
 
         const octokit = new Octokit({
-            auth: process.env.GHP_TOKEN,
+            auth: process.env.NEXT_PUBLIC_GHP_TOKEN,
         });
         let res: any = await octokit.request(
             "GET /users/{username}/events/public",
